@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Keystone North Property Partners</title>
+<meta name="description" content="Keystone North Property Partners. Sell your house fast in Leeds and Manchester, or get hand-picked below-market property deals as an investor.">
+<style>:root{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+</head>
+<body>
+
+<style>
+/* Layout: stone-and-slate keystone arch motif; split seller/investor paths run as two lanes through the page */
+:root{
+  --bg:#f3f4f2; --surface:#ffffff; --ink:#1c2328; --muted:#5b6670; --line:#d9ddda;
+  --slate:#26333c; --slate-ink:#eef1f0; --brick:#b23a2a; --brick-ink:#ffffff; --brick-soft:#f6e3df;
+  --sage:#2f6b55;
+  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12171b; --surface:#1a2127; --ink:#e7ebe9; --muted:#9aa5ad; --line:#2c353c;
+  --slate:#0c1013; --slate-ink:#e7ebe9; --brick:#d65a46; --brick-ink:#ffffff; --brick-soft:#3a201b; --sage:#5fae8f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12171b; --surface:#1a2127; --ink:#e7ebe9; --muted:#9aa5ad; --line:#2c353c;
+  --slate:#0c1013; --slate-ink:#e7ebe9; --brick:#d65a46; --brick-ink:#ffffff; --brick-soft:#3a201b; --sage:#5fae8f; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);line-height:1.02;letter-spacing:.005em;text-wrap:balance;margin:0}
+h2{font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase}
+h3{font-size:1.5rem;text-transform:uppercase}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brick);outline-offset:2px}
+.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brick)}
+.draft{background:var(--brick);color:var(--brick-ink);font-size:.8rem;text-align:center;padding-block:6px}
+
+/* header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--slate)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--slate);color:var(--slate-ink)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{flex:none}
+.brand b{font-family:var(--f-display);font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;line-height:1}
+.brand small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;opacity:.75}
+.links{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:.9rem}
+.links a{text-decoration:none;opacity:.85}
+.links a:hover{opacity:1;text-decoration:underline}
+
+/* hero */
+.hero{background:var(--slate);color:var(--slate-ink);padding-block:56px 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);text-transform:uppercase}
+.hero h1 em{font-style:normal;color:var(--brick)}
+.hero p.lead{font-size:1.15rem;max-width:34em;margin-top:18px;opacity:.88}
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:40px}
+.path{display:flex;flex-direction:column;gap:8px;padding:22px 22px 26px;text-decoration:none;min-width:0}
+.path.sell{background:var(--brick);color:var(--brick-ink)}
+.path.inv{background:var(--surface);color:var(--ink)}
+.path span{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.85}
+.path strong{font-family:var(--f-display);font-size:1.9rem;text-transform:uppercase;line-height:1}
+.path i{font-style:normal;font-weight:600}
+.path:hover strong{text-decoration:underline}
+.arch{width:100%;max-width:380px;justify-self:end}
+.trust{display:flex;flex-wrap:wrap;gap:8px 28px;padding-block:18px;font-size:.88rem;border-top:1px solid var(--line);background:var(--surface)}
+.trust li{list-style:none;display:flex;gap:8px;align-items:center}
+.trust ul{display:contents;margin:0;padding:0}
+.trust li::before{content:"";width:8px;height:8px;background:var(--brick);transform:rotate(45deg)}
+
+section{padding-block:72px}
+.sec-head{display:grid;gap:10px;margin-bottom:36px;max-width:44em}
+.sec-head p{color:var(--muted);font-size:1.05rem}
+
+/* two lanes */
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.lane{background:var(--surface);border:1px solid var(--line);padding:28px;display:grid;gap:18px;align-content:start;min-width:0}
+.lane.sell{border-top:6px solid var(--brick)}
+.lane.inv{border-top:6px solid var(--slate)}
+.ticks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.ticks li{display:grid;grid-template-columns:22px 1fr;gap:8px}
+.ticks li::before{content:"✓";font-weight:700;color:var(--sage)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:start}
+.steps li::before{content:counter(s);font-family:var(--f-display);font-size:1.4rem;background:var(--ink);color:var(--bg);width:30px;height:30px;display:grid;place-items:center}
+
+/* forms */
+form{display:grid;gap:12px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{display:grid;gap:4px;font-size:.82rem;font-weight:600}
+input,select,textarea{font:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:0;width:100%;min-width:0}
+textarea{min-height:76px;resize:vertical}
+.btn{font:inherit;font-weight:700;border:0;padding:14px 18px;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center}
+.btn.sell{background:var(--brick);color:var(--brick-ink)}
+.btn.inv{background:var(--slate);color:var(--slate-ink)}
+.btn:hover{filter:brightness(1.08)}
+.ok{background:var(--brick-soft);padding:14px;font-size:.92rem}
+.fine{font-size:.78rem;color:var(--muted)}
+
+/* deal pack */
+.deal{background:var(--slate);color:var(--slate-ink);padding:24px;display:grid;gap:14px}
+.deal .tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;color:var(--brick);text-transform:uppercase}
+.deal dl{display:grid;grid-template-columns:1fr auto;gap:6px 16px;margin:0;font-variant-numeric:tabular-nums}
+.deal dt{opacity:.75}
+.deal dd{margin:0;font-family:var(--f-mono);text-align:right}
+.deal .big{border-top:1px solid rgba(255,255,255,.18);padding-top:10px;font-weight:700}
+
+/* how / about */
+.how{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.about p+p{margin-top:14px}
+.about .quote{font-family:var(--f-display);font-size:clamp(1.8rem,3.6vw,2.6rem);text-transform:uppercase;line-height:1.05;border-left:6px solid var(--brick);padding-left:18px}
+.faq{display:grid;gap:10px;max-width:820px}
+details{background:var(--surface);border:1px solid var(--line);padding:16px 18px}
+summary{cursor:pointer;font-weight:600}
+summary span{color:var(--brick);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-right:8px}
+details p{margin-top:10px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact div{background:var(--surface);border:1px solid var(--line);padding:18px;display:grid;gap:4px;min-width:0}
+.contact b{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.contact code{font-family:var(--f-mono);font-size:.9rem;overflow-wrap:anywhere}
+
+footer{background:var(--slate);color:var(--slate-ink);padding-block:36px;font-size:.85rem}
+.foot{display:grid;gap:16px}
+.reg{display:flex;flex-wrap:wrap;gap:8px}
+.reg span{border:1px dashed rgba(255,255,255,.35);padding:4px 10px;font-family:var(--f-mono);font-size:.74rem}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+
+@media (max-width:820px){
+  .hero-grid,.lanes,.how,.about{grid-template-columns:1fr}
+  .arch{display:none}
+  .contact{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .paths,.row{grid-template-columns:1fr}
+  .links{font-size:.82rem}
+  section{padding-block:52px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* lead profiler popup */
+.qz-back{position:fixed;inset:0;z-index:20;background:rgba(12,16,19,.6);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.qz{background:var(--surface);color:var(--ink);width:100%;max-width:480px;max-height:100%;overflow:auto;border-top:6px solid var(--brick);padding:24px;display:grid;gap:16px;position:relative}
+.qz-x{position:absolute;top:10px;right:12px;background:none;border:0;font-size:1.5rem;line-height:1;color:var(--muted);cursor:pointer;padding:4px 8px}
+.qz h3{font-size:1.7rem;padding-right:28px}
+.qz-bar{height:4px;background:var(--line)}
+.qz-bar i{display:block;height:100%;background:var(--brick);transition:width .25s}
+.qz-opts{display:grid;gap:8px}
+.qz-opt{font:inherit;text-align:left;padding:12px 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
+.qz-opt:hover{border-color:var(--brick)}
+.qz-step{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.grade{display:grid;gap:6px;padding:14px;border:1px dashed var(--line)}
+.grade b{font-family:var(--f-display);font-size:1.6rem;text-transform:uppercase}
+.grade.hot b{color:var(--brick)}.grade.warm b{color:#c07a12}.grade.cold b{color:#3d7fb0}
+.qz-link{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem;justify-self:start;padding:0}
+</style>
+
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Keystone North Property Partners, home">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 31V16a14 14 0 0 1 28 0v15h-7V17a7 7 0 0 0-14 0v14z" fill="currentColor" opacity=".9"/><path d="M13.5 2.6h7l-1.4 8.6h-4.2z" fill="var(--brick)"/></svg>
+      <span><b>Keystone North</b><small>Property Partners</small></span>
+    </a>
+    <nav class="links" aria-label="Main">
+      <a href="#sellers">Sell your house</a>
+      <a href="#investors">Investors</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Leeds · Manchester · across the North</p>
+        <h1>Property solutions for the North. <em>Sellers</em> and <em>investors</em>, sorted.</h1>
+        <p class="lead">Need to sell fast? Looking for your next below-market deal? We connect motivated sellers with serious investors, quickly, fairly and without the hassle.</p>
+      </div>
+      <svg class="arch" viewBox="0 0 380 300" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-opacity=".28" stroke-width="2">
+          <path d="M20 300V170a170 170 0 0 1 340 0v130"/>
+          <path d="M80 300V175a110 110 0 0 1 220 0v125"/>
+          <path d="M50 230h30M300 230h30M50 270h30M300 270h30M26 120l52 28M354 120l-52 28M78 52l38 44M302 52l-38 44"/>
+        </g>
+        <path d="M168 0h44l-8 66h-28z" fill="var(--brick)"/>
+      </svg>
+    </div>
+    <div class="wrap">
+      <div class="paths">
+        <a class="path sell" href="#sellers"><span>Homeowners</span><strong>I want to sell my house</strong><i>Free, no-obligation offer →</i></a>
+        <a class="path inv" href="#investors"><span>Investors</span><strong>I'm an investor</strong><i>Get deals first →</i></a>
+      </div>
+    </div>
+  </div>
+  <div class="trust"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:8px 28px"><ul>
+    <li>Fast offers</li><li>No estate agent fees for sellers</li><li>Fully vetted deals for investors</li><li>Covering Leeds and Manchester</li>
+  </ul></div></div>
+
+  <section id="sellers">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">For homeowners</p>
+        <h2>Sell your house fast, on your timeline</h2>
+        <p>Stuck in a chain? Inherited a property? Tired landlord? Facing repairs you can't afford? We can help you sell quickly, whatever the condition.</p>
+      </div>
+      <div class="lanes">
+        <div class="lane sell">
+          <h3>Why sellers choose us</h3>
+          <ul class="ticks">
+            <li>A fair offer, usually within 48 hours</li>
+            <li>No estate agent fees and no lengthy listings</li>
+            <li>Any condition. No need to fix anything first</li>
+            <li>You choose your completion date</li>
+            <li>Friendly, local, no-pressure service</li>
+          </ul>
+          <h3>How it works</h3>
+          <ol class="steps">
+            <li>Tell us about your property. It takes two minutes.</li>
+            <li>We assess it and come back with a fair offer.</li>
+            <li>You pick the date. We handle the rest.</li>
+          </ol>
+        </div>
+        <div class="lane sell">
+          <h3>Get your free offer</h3>
+          <form id="sellForm" data-msg="Thanks. We'll call you within 48 hours with your free, no-obligation offer.">
+            <div class="row">
+              <label for="s-name">Name<input id="s-name" required autocomplete="name"></label>
+              <label for="s-phone">Phone<input id="s-phone" type="tel" required autocomplete="tel"></label>
+            </div>
+            <label for="s-email">Email<input id="s-email" type="email" autocomplete="email"></label>
+            <label for="s-addr">Property address<input id="s-addr" required autocomplete="street-address"></label>
+            <div class="row">
+              <label for="s-why">Reason for selling<select id="s-why"><option>Need a quick sale</option><option>Inherited property</option><option>Tired landlord</option><option>Repairs needed</option><option>Relocating</option><option>Other</option></select></label>
+              <label for="s-when">Timescale<select id="s-when"><option>ASAP</option><option>1 to 3 months</option><option>3 to 6 months</option><option>Just exploring</option></select></label>
+            </div>
+            <label for="s-cond">Property condition<textarea id="s-cond" placeholder="e.g. 2-bed terrace, needs a new kitchen and some damp work"></textarea></label>
+            <button class="btn sell" type="submit">Get my free, no-obligation offer <span>→</span></button>
+            <p class="fine">No cost and no obligation. We never share your details without your permission. Read our <a href="privacy.html">privacy notice</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="investors" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">For investors</p>
+        <h2>Hand-picked below-market deals across the North</h2>
+        <p>Stop scrolling Rightmove. We find, negotiate and package high-yield deals so you can invest with confidence, even remotely.</p>
+      </div>
+      <div class="lanes">
+        <div class="lane inv">
+          <h3>What you get</h3>
+          <ul class="ticks">
+            <li>Off-market and below-market-value opportunities</li>
+            <li>Full deal packs: purchase price, refurb estimate, comparables, rent and yield</li>
+            <li>Buy-to-let, flips, HMOs and portfolio deals</li>
+            <li>Deals matched to your exact criteria</li>
+            <li>Support from offer through to completion</li>
+          </ul>
+          <div class="deal" aria-label="Example deal pack">
+            <p class="tag">Example deal pack · illustration only</p>
+            <h3>2-bed terrace, Leeds LS11</h3>
+            <dl>
+              <dt>Agreed purchase price</dt><dd>£112,000</dd>
+              <dt>Estimated end value</dt><dd>£155,000</dd>
+              <dt>Refurb estimate</dt><dd>£9,500</dd>
+              <dt>Expected rent</dt><dd>£850 pcm</dd>
+              <dt>Gross yield on purchase</dt><dd>9.1%</dd>
+              <dt class="big">Equity after refurb</dt><dd class="big">£33,500</dd>
+            </dl>
+          </div>
+        </div>
+        <div class="lane inv">
+          <h3>Join the investor list</h3>
+          <form id="invForm" data-msg="Thanks. You're on the list, and we'll send you deals that match your criteria.">
+            <div class="row">
+              <label for="i-name">Name<input id="i-name" required autocomplete="name"></label>
+              <label for="i-phone">Phone<input id="i-phone" type="tel" autocomplete="tel"></label>
+            </div>
+            <label for="i-email">Email<input id="i-email" type="email" required autocomplete="email"></label>
+            <div class="row">
+              <label for="i-budget">Budget<select id="i-budget"><option>Up to £100k</option><option>£100k to £150k</option><option>£150k to £250k</option><option>£250k+</option></select></label>
+              <label for="i-strat">Strategy<select id="i-strat"><option>Buy-to-let</option><option>Flip</option><option>HMO</option><option>Portfolio</option><option>Other</option></select></label>
+            </div>
+            <div class="row">
+              <label for="i-areas">Preferred areas<input id="i-areas" placeholder="e.g. Leeds, Manchester, Salford"></label>
+              <label for="i-fund">Buying with<select id="i-fund"><option>Cash</option><option>Mortgage</option><option>Bridging finance</option></select></label>
+            </div>
+            <button class="btn inv" type="submit">Join the investor list. Get deals first <span>→</span></button>
+            <p class="fine">A sourcing fee applies on reservation and is shown on every deal pack. Read our <a href="privacy.html">privacy notice</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">How it works</p><h2>One simple process, two sides</h2></div>
+      <div class="how">
+        <div class="lane sell"><h3>For sellers</h3><ol class="steps"><li>Contact us</li><li>We value and make an offer</li><li>You choose the completion date</li></ol></div>
+        <div class="lane inv"><h3>For investors</h3><ol class="steps"><li>Register your criteria</li><li>Receive matched deal packs</li><li>Reserve the deal</li><li>We guide you to completion</li></ol></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="alt">
+    <div class="wrap about">
+      <p class="quote">We know these streets, these houses and the people in them.</p>
+      <div>
+        <p class="eyebrow">About us</p>
+        <p style="margin-top:10px">Keystone North Property Partners was built on years of door-to-door experience across the North. Today we focus on Leeds and Manchester, two of the strongest rental markets in the country.</p>
+        <p>Our job is simple. Help homeowners who need a quick, fair sale, and give investors access to deals that genuinely stack up. Honest numbers, straight talking, no gimmicks.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Questions</p><h2>Frequently asked</h2></div>
+      <div class="faq">
+        <details><summary><span>Sellers</span>Will you really help in any condition?</summary><p>Yes. Damp, dated or unmodernised, we'll still make an offer.</p></details>
+        <details><summary><span>Sellers</span>Is there any cost to me?</summary><p>No. Our offer is free and there's no obligation.</p></details>
+        <details><summary><span>Investors</span>How are deals priced?</summary><p>Each deal pack shows the figures in full. A sourcing fee applies on reservation and is stated clearly up front.</p></details>
+        <details><summary><span>Investors</span>Can I invest remotely?</summary><p>Yes. Our deal packs and local team mean you don't need to be on the ground.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Contact</p><h2>Talk to a real person</h2></div>
+      <p style="max-width:40em">The quickest way to reach us is the form for <a href="#sellers">selling a house</a> or <a href="#investors">investing</a>. We call every enquiry back, usually the same day.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <strong style="font-family:var(--f-display);font-size:1.4rem;text-transform:uppercase">Keystone North Property Partners</strong>
+    <p><a href="privacy.html">Privacy notice</a></p>
+    <p>Written by Jason Nota · Intellectual property of Jason Nota</p>
+  </div>
+</footer>
+
+<script>
+// Lead sending to n8n 'Keystone 1 - Lead Intake'.
+var KN={webhook:'https://monad.app.n8n.cloud/webhook/keystone-lead',
+  send:function(p){if(!KN.webhook)return;try{fetch(KN.webhook,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)}).catch(function(){})}catch(e){}},
+  v:function(id){var e=document.getElementById(id);return e?e.value:''},
+  formLead:function(f){var v=KN.v;
+    if(f.id==='sellForm')KN.send({type:'seller',Name:v('s-name'),Phone:v('s-phone'),Email:v('s-email'),'Property Address':v('s-addr'),Reason:v('s-why'),Timescale:v('s-when'),Notes:v('s-cond'),Source:'Website form'});
+    else if(f.id==='invForm')KN.send({type:'investor',Name:v('i-name'),Phone:v('i-phone'),Email:v('i-email'),Budget:v('i-budget'),Strategy:v('i-strat'),Areas:v('i-areas'),Funding:v('i-fund'),Source:'Website form'});}};
+window.KN=KN;
+document.querySelectorAll('form').forEach(function(f){
+  f.addEventListener('submit',function(e){
+    e.preventDefault();KN.formLead(f);
+    var m=document.createElement('p');m.className='ok';m.textContent=f.dataset.msg;
+    var old=f.querySelector('.ok');if(old)old.remove();
+    f.appendChild(m);
+  });
+});
+</script>
+
+<div class="qz-back" id="qz" hidden role="dialog" aria-modal="true" aria-labelledby="qz-title">
+  <div class="qz">
+    <button class="qz-x" id="qz-close" aria-label="Close">×</button>
+    <div class="qz-bar"><i id="qz-prog" style="width:0"></i></div>
+    <div id="qz-body"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var Q={
+    start:{q:'Quick question: what brings you here today?',opts:[['I want to sell a property','seller',0],['I want to invest in property','investor',0],['Just having a look','browse',0]]},
+    seller:[
+      {k:'Area',q:'Where is the property?',opts:[['Leeds area',1],['Greater Manchester',1],['Elsewhere in the North',0],['Somewhere else in the UK',0]]},
+      {k:'Timescale',q:'How quickly do you need to sell?',opts:[['As soon as possible',3],['Within 3 months',2],['Within 6 months',1],['No rush, just exploring',0]]},
+      {k:'Reason',q:'What is the main reason for selling?',opts:[['Money worries or repossession risk',3],['Inherited or empty property',3],['Tired landlord or problem tenants',2],['Relocating or downsizing',1],['Testing the market',0]]},
+      {k:'Tried Selling',q:'Have you tried selling it already?',opts:[['Yes, on the market 3+ months with no luck',2],['Yes, recently listed',1],['A sale fell through',2],['No, not yet',0]]},
+      {k:'Accept Lower Price',q:'Would you accept a lower price for a quick, guaranteed sale?',opts:[['Yes, speed and certainty matter most',3],['Maybe, depending on the offer',1],['No, I want full market value',0]]},
+      {k:'Owner',q:'Are you the owner, or able to make the decision?',opts:[['Yes, I own it',1],['It is jointly owned and we agree',1],['No, I am asking for someone else',0]]}
+    ],
+    investor:[
+      {k:'Areas',q:'Which areas are you most interested in?',opts:[['Leeds',1],['Manchester',1],['Both Leeds and Manchester',1],['Anywhere with good yields',0]]},
+      {k:'Properties Owned',q:'How many investment properties do you own?',opts:[['4 or more',2],['1 to 3',1],['None yet, this would be my first',0]]},
+      {k:'Funding',q:'How would you fund your next purchase?',opts:[['Cash, ready now',3],['Mortgage with agreement in principle',2],['Bridging finance arranged',2],['Not sorted yet',0]]},
+      {k:'Timescale',q:'When are you looking to buy?',opts:[['Right now, I need a deal',3],['In the next 3 months',2],['In 6 months or more',0]]},
+      {k:'Budget',q:'What budget per property?',opts:[['£150k or more',2],['£100k to £150k',2],['Up to £100k',1],['Not sure yet',0]]},
+      {k:'Used Sourcer',q:'Have you bought through a deal sourcer before?',opts:[['Yes, happy paying a sourcing fee',1],['No, but open to it',1],['No, I only buy direct',0]]}
+    ]
+  };
+  var el=document.getElementById('qz'),body=document.getElementById('qz-body'),prog=document.getElementById('qz-prog');
+  var path=null,i=0,score=0,answers=[],ans={};
+  function seen(){try{return localStorage.getItem('kn-qz')==='1'}catch(e){return false}}
+  function mark(){try{localStorage.setItem('kn-qz','1')}catch(e){}}
+  function close(){el.hidden=true;mark()}
+  document.getElementById('qz-close').onclick=close;
+  el.addEventListener('click',function(e){if(e.target===el)close()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!el.hidden)close()});
+  function opts(list,fn){var w=document.createElement('div');w.className='qz-opts';list.forEach(function(o){var b=document.createElement('button');b.className='qz-opt';b.type='button';b.textContent=o[0];b.onclick=function(){fn(o)};w.appendChild(b)});return w}
+  function render(title,step,node,pct){body.innerHTML='';var s=document.createElement('p');s.className='qz-step';s.textContent=step;var h=document.createElement('h3');h.id='qz-title';h.textContent=title;body.append(s,h,node);prog.style.width=pct+'%';var f=body.querySelector('button,input');if(f)f.focus()}
+  function start(){render(Q.start.q,'Help us help you',opts(Q.start.opts,function(o){if(o[1]==='browse'){thanks(null);return}path=o[1];i=0;score=0;answers=[];ans={};ask()}),0)}
+  function ask(){var list=Q[path];if(i>=list.length){details();return}var it=list[i];render(it.q,'Question '+(i+1)+' of '+list.length,opts(it.opts,function(o){score+=o[1];answers.push([it.q,o[0]]);ans[it.k]=o[0];i++;ask()}),(i/(list.length+1))*100)}
+  function maxScore(){return Q[path].reduce(function(t,it){return t+Math.max.apply(null,it.opts.map(function(o){return o[1]}))},0)}
+  function grade(){var p=score/maxScore();if(p>=0.7)return['hot','Hot lead','Call within the hour.'];if(p>=0.4)return['warm','Warm lead','Call within 24 hours and nurture.'];return['cold','Cold lead','Add to the email list and follow up monthly.']}
+  function details(){var f=document.createElement('form');f.innerHTML='<label for="qz-name">Name<input id="qz-name" required autocomplete="name"></label><label for="qz-phone">Phone<input id="qz-phone" type="tel" autocomplete="tel"></label><label for="qz-email">Email<input id="qz-email" type="email" required autocomplete="email"></label><button class="btn '+(path==='seller'?'sell':'inv')+'" type="submit">'+(path==='seller'?'Get my free offer':'Send me matching deals')+' <span>→</span></button><p class="fine">We only use your details to contact you about this. No spam. <a href=\"privacy.html\">Privacy notice</a></p>';f.addEventListener('submit',function(e){e.preventDefault();if(window.KN)KN.send(Object.assign({type:path,Name:KN.v('qz-name'),Phone:KN.v('qz-phone'),Email:KN.v('qz-email'),Score:score,'Max Score':maxScore(),Source:'Website pop-up'},ans));thanks(grade())});render(path==='seller'?'Great. Where should we send your offer?':'Great. Where should we send your deals?','Last step',f,95)}
+  function thanks(g){var w=document.createElement('div');w.style.display='grid';w.style.gap='14px';var p=document.createElement('p');p.textContent=g?'Thanks. One of the team will be in touch shortly.':'No problem. Have a look around, and the buttons at the top will take you to the right place.';w.appendChild(p);var c=document.createElement('button');c.className='btn inv';c.type='button';c.innerHTML='Close <span>×</span>';c.onclick=close;w.appendChild(c);render(g?'You are all set':'Enjoy the site','Done',w,100);mark()}
+  setTimeout(function(){if(!seen()){start();el.hidden=false}},5000);
+})();
+</script>
+
+</body>
+</html>
