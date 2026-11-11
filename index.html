@@ -4,298 +4,413 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Keystone North Property Partners</title>
-<meta name="description" content="Keystone North Property Partners. Sell your house fast in Leeds and Manchester, or get hand-picked below-market property deals as an investor.">
-<style>:root{color-scheme:light}body{margin:0;font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<meta name="description" content="Keystone North Property Partners. A fair, fast sale for homeowners in Leeds and Manchester, and hand-picked below-market deals for property investors.">
+<meta name="theme-color" content="#ffffff">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: white editorial corporate - hairline rules, one navy anchor, emerald accent used once per section */
+:root{
+  --paper:#ffffff;
+  --tint:#f7f9fb;
+  --tint-2:#eef3f7;
+  --ink:#0d1b2a;
+  --ink-soft:#243a52;
+  --muted:#5e7184;
+  --line:#e2e8ee;
+  --line-strong:#cbd6e0;
+  --accent:#0d6b5b;
+  --accent-soft:#eaf4f1;
+  --gold:#a8812f;
+  --shadow-sm:0 1px 2px rgba(13,27,42,.06);
+  --shadow:0 2px 4px rgba(13,27,42,.04), 0 18px 40px -24px rgba(13,27,42,.28);
+  --shadow-lg:0 2px 6px rgba(13,27,42,.05), 0 36px 70px -34px rgba(13,27,42,.42);
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.62;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:500;line-height:1.08;letter-spacing:-.012em;text-wrap:balance;margin:0;color:var(--ink)}
+h1{font-size:clamp(2.5rem,5.4vw,4.1rem)}
+h2{font-size:clamp(1.95rem,3.6vw,2.9rem)}
+h3{font-size:1.32rem;line-height:1.2}
+h4{font-size:1.05rem;font-family:var(--f-body);font-weight:600;letter-spacing:0}
+p{margin:0}
+a{color:var(--accent)}
+img,svg{max-width:100%}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);margin:0}
+.muted{color:var(--muted)}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+
+/* ---------- header ---------- */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:#fff}
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:18px;padding-block:14px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand .mark{flex:none;width:34px;height:34px}
+.brand b{display:block;font-family:var(--f-display);font-weight:600;font-size:1.12rem;line-height:1.05;letter-spacing:-.01em}
+.brand em{display:block;font-style:normal;font-size:.62rem;letter-spacing:.21em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+.site-nav{display:flex;gap:26px;font-size:.92rem;font-weight:500;flex-wrap:wrap}
+.site-nav a{color:var(--ink-soft);text-decoration:none;padding-block:4px;border-bottom:1.5px solid transparent}
+.site-nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:inherit;font-weight:600;font-size:.95rem;padding:13px 22px;border:1px solid transparent;border-radius:3px;cursor:pointer;text-decoration:none;transition:background .15s,border-color .15s,color .15s,transform .15s}
+.btn svg{flex:none}
+.btn-primary{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-primary:hover{background:#17304a;border-color:#17304a}
+.btn-accent{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn-accent:hover{background:#0a564a;border-color:#0a564a}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--ink);background:var(--tint)}
+.btn-sm{padding:10px 17px;font-size:.88rem}
+.btn-wide{width:100%;justify-content:space-between;padding:15px 20px}
+.btn:active{transform:translateY(1px)}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(48px,7vw,92px) clamp(40px,5vw,64px);background:
+  radial-gradient(900px 420px at 88% -8%, var(--accent-soft) 0%, rgba(255,255,255,0) 62%),
+  linear-gradient(180deg,#fff 0%,var(--tint) 100%)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(32px,5vw,70px);align-items:center}
+.hero h1{margin-top:16px}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .lead{font-size:1.14rem;color:var(--ink-soft);max-width:33em;margin-top:20px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero-points{list-style:none;margin:30px 0 0;padding:26px 0 0;border-top:1px solid var(--line);display:flex;gap:10px 34px;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+.hero-points li{display:flex;align-items:center;gap:9px}
+.hero-points svg{color:var(--accent);flex:none}
+
+/* deal card */
+.card-deal{background:#fff;border:1px solid var(--line);border-radius:5px;box-shadow:var(--shadow-lg);overflow:hidden}
+.card-deal .cd-top{background:var(--ink);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.card-deal .cd-top p{font-size:.66rem;letter-spacing:.17em;text-transform:uppercase;color:#9fb3c6}
+.card-deal .cd-top strong{display:block;font-family:var(--f-display);font-weight:500;font-size:1.22rem;margin-top:5px;letter-spacing:-.01em}
+.pill{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:5px 9px;border-radius:999px;white-space:nowrap}
+.card-deal dl{margin:0;padding:6px 22px 4px;font-variant-numeric:tabular-nums}
+.card-deal .ln{display:flex;justify-content:space-between;gap:16px;padding-block:11px;border-bottom:1px solid var(--line)}
+.card-deal dt{color:var(--muted);font-size:.92rem}
+.card-deal dd{margin:0;font-weight:600;font-size:.98rem}
+.card-deal .ln.total{border-bottom:0;padding-top:14px;margin-top:2px;border-top:2px solid var(--ink)}
+.card-deal .ln.total dt{color:var(--ink);font-weight:600;font-size:.95rem}
+.card-deal .ln.total dd{color:var(--accent);font-size:1.3rem;font-family:var(--f-display)}
+.card-deal .cd-foot{padding:14px 22px 18px;font-size:.76rem;color:var(--muted);background:var(--tint);border-top:1px solid var(--line)}
+
+/* ---------- strip ---------- */
+.strip{border-block:1px solid var(--line);background:#fff}
+.strip-in{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.strip-in div{background:#fff;padding:26px 22px}
+.strip-in b{display:block;font-family:var(--f-display);font-size:1.75rem;font-weight:500;letter-spacing:-.02em;color:var(--ink)}
+.strip-in span{display:block;font-size:.82rem;color:var(--muted);margin-top:5px}
+
+/* ---------- sections ---------- */
+section{padding-block:clamp(56px,7vw,100px)}
+.tint{background:var(--tint);border-block:1px solid var(--line)}
+.sec-head{max-width:46em;margin-bottom:clamp(32px,4vw,52px)}
+.sec-head h2{margin-top:13px}
+.sec-head p.sub{color:var(--muted);font-size:1.08rem;margin-top:16px}
+
+/* paths */
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.path{background:#fff;border:1px solid var(--line);border-radius:5px;padding:34px;text-decoration:none;color:inherit;display:grid;gap:14px;align-content:start;box-shadow:var(--shadow-sm);transition:box-shadow .2s,border-color .2s,transform .2s}
+.path:hover{box-shadow:var(--shadow);border-color:var(--line-strong);transform:translateY(-2px)}
+.path .ico{width:46px;height:46px;border-radius:4px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.path h3{margin-top:4px}
+.path p{color:var(--muted);font-size:.98rem}
+.path .go{color:var(--accent);font-weight:600;font-size:.92rem;display:flex;align-items:center;gap:8px;margin-top:4px}
+
+/* split sections */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:start}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:15px}
+.ticks li{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;font-size:1rem}
+.ticks svg{color:var(--accent);margin-top:4px}
+.ticks b{font-weight:600}
+.ticks span{color:var(--muted);display:block;font-size:.92rem}
+
+/* form card */
+.form-card{background:#fff;border:1px solid var(--line);border-radius:5px;box-shadow:var(--shadow);padding:clamp(24px,3vw,34px);position:sticky;top:96px}
+.form-card h3{margin-bottom:6px}
+.form-card>p.note{color:var(--muted);font-size:.92rem;margin-bottom:20px}
+form{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft)}
+input,select,textarea{font:inherit;font-size:.97rem;text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink);padding:12px 13px;border:1px solid var(--line-strong);background:#fff;border-radius:3px;width:100%;min-width:0;transition:border-color .15s,box-shadow .15s}
+input:hover,select:hover,textarea:hover{border-color:#aebccb}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+textarea{min-height:84px;resize:vertical}
+.fine{font-size:.78rem;color:var(--muted);line-height:1.5}
+.ok{background:var(--accent-soft);border:1px solid #bfdcd4;color:#0a4f44;padding:14px 16px;border-radius:4px;font-size:.93rem}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:st}
+.step{counter-increment:st;padding:0 26px 0 0;position:relative}
+.step::before{content:counter(st,decimal-leading-zero);display:block;font-family:var(--f-display);font-size:.95rem;font-weight:600;color:var(--accent);letter-spacing:.06em}
+.step .bar{height:2px;background:var(--line);margin:14px 0 18px;position:relative}
+.step .bar::after{content:"";position:absolute;left:0;top:0;height:2px;width:34px;background:var(--accent)}
+.step h4{margin-bottom:7px}
+.step p{color:var(--muted);font-size:.93rem}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+.pull{font-family:var(--f-display);font-size:clamp(1.6rem,2.8vw,2.3rem);line-height:1.18;letter-spacing:-.015em;color:var(--ink)}
+.pull span{color:var(--accent);font-style:italic}
+.sig{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:center;gap:13px}
+.sig .av{width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-family:var(--f-display);font-size:1.05rem;flex:none}
+.sig b{display:block;font-size:.95rem}
+.sig span{font-size:.82rem;color:var(--muted)}
+.about p+p{margin-top:15px}
+.about .body{color:var(--ink-soft)}
+
+/* faq */
+.faq{display:grid;gap:0;max-width:860px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);background:transparent}
+summary{cursor:pointer;font-weight:600;font-size:1.04rem;padding:20px 40px 20px 0;list-style:none;position:relative;color:var(--ink)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:8px;top:27px;width:9px;height:9px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);transform:rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:rotate(-135deg)}
+details .ans{padding:0 0 22px;color:var(--muted);max-width:62em}
+summary .tag{display:inline-block;font-size:.64rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:3px 8px;border-radius:3px;margin-right:11px;vertical-align:2px}
+
+/* cta band */
+.band{background:var(--ink);color:#fff;padding-block:clamp(48px,6vw,78px)}
+.band h2{color:#fff}
+.band p{color:#a9bccd;margin-top:14px;font-size:1.06rem;max-width:40em}
+.band .cta-row{margin-top:28px}
+.band .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+.band .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
+
+/* footer */
+footer{background:#fff;border-top:1px solid var(--line);padding-block:48px 34px;font-size:.9rem}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:34px}
+.foot-grid h5{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;font-weight:700}
+.foot-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.foot-grid a{color:var(--ink-soft);text-decoration:none}
+.foot-grid a:hover{color:var(--accent)}
+.foot-note{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:.82rem}
+
+/* ---------- popup ---------- */
+.qz-back{position:fixed;inset:0;z-index:100;background:rgba(13,27,42,.55);backdrop-filter:blur(3px);display:grid;place-items:center;padding:max(18px,env(safe-area-inset-top,0px)) max(18px,env(safe-area-inset-right,0px)) max(18px,env(safe-area-inset-bottom,0px)) max(18px,env(safe-area-inset-left,0px))}
+.qz{background:#fff;color:var(--ink);width:100%;max-width:490px;max-height:100%;overflow:auto;border-radius:6px;box-shadow:var(--shadow-lg);padding:30px;display:grid;gap:18px;position:relative}
+.qz-x{position:absolute;top:12px;right:14px;background:none;border:0;font-size:1.45rem;line-height:1;color:var(--muted);cursor:pointer;padding:5px 9px;border-radius:3px}
+.qz-x:hover{background:var(--tint);color:var(--ink)}
+.qz h3{font-size:1.5rem;padding-right:30px}
+.qz-bar{height:3px;background:var(--line);border-radius:999px;overflow:hidden}
+.qz-bar i{display:block;height:100%;background:var(--accent);transition:width .3s ease}
+.qz-opts{display:grid;gap:9px}
+.qz-opt{font:inherit;font-size:.97rem;text-align:left;padding:14px 16px;border:1px solid var(--line-strong);background:#fff;color:var(--ink);cursor:pointer;border-radius:4px;transition:border-color .15s,background .15s}
+.qz-opt:hover{border-color:var(--accent);background:var(--accent-soft)}
+.qz-step{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:0}
+.qz form{gap:13px}
+
+@media (max-width:980px){
+  .hero-grid,.about,.split{grid-template-columns:1fr}
+  .form-card{position:static}
+  .steps{grid-template-columns:1fr 1fr;gap:30px 0}
+  .strip-in{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .paths,.row,.steps,.strip-in{grid-template-columns:1fr}
+  .site-nav{display:none}
+  .head-in .btn{margin-left:auto}
+  .brand{margin-right:0}
+  .foot-grid{grid-template-columns:1fr}
+  .qz{padding:24px 20px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
 <body>
 
-<style>
-/* Layout: stone-and-slate keystone arch motif; split seller/investor paths run as two lanes through the page */
-:root{
-  --bg:#f3f4f2; --surface:#ffffff; --ink:#1c2328; --muted:#5b6670; --line:#d9ddda;
-  --slate:#26333c; --slate-ink:#eef1f0; --brick:#b23a2a; --brick-ink:#ffffff; --brick-soft:#f6e3df;
-  --sage:#2f6b55;
-  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
-  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#12171b; --surface:#1a2127; --ink:#e7ebe9; --muted:#9aa5ad; --line:#2c353c;
-  --slate:#0c1013; --slate-ink:#e7ebe9; --brick:#d65a46; --brick-ink:#ffffff; --brick-soft:#3a201b; --sage:#5fae8f; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#12171b; --surface:#1a2127; --ink:#e7ebe9; --muted:#9aa5ad; --line:#2c353c;
-  --slate:#0c1013; --slate-ink:#e7ebe9; --brick:#d65a46; --brick-ink:#ffffff; --brick-soft:#3a201b; --sage:#5fae8f; color-scheme:dark}
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6}
-.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h1,h2,h3{font-family:var(--f-display);line-height:1.02;letter-spacing:.005em;text-wrap:balance;margin:0}
-h2{font-size:clamp(2rem,4.5vw,3rem);text-transform:uppercase}
-h3{font-size:1.5rem;text-transform:uppercase}
-p{margin:0}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--brick);outline-offset:2px}
-.eyebrow{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brick)}
-.draft{background:var(--brick);color:var(--brick-ink);font-size:.8rem;text-align:center;padding-block:6px}
-
-/* header */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--slate)}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--slate);color:var(--slate-ink)}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand svg{flex:none}
-.brand b{font-family:var(--f-display);font-size:1.35rem;letter-spacing:.04em;text-transform:uppercase;line-height:1}
-.brand small{display:block;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;opacity:.75}
-.links{display:flex;gap:6px 20px;flex-wrap:wrap;font-size:.9rem}
-.links a{text-decoration:none;opacity:.85}
-.links a:hover{opacity:1;text-decoration:underline}
-
-/* hero */
-.hero{background:var(--slate);color:var(--slate-ink);padding-block:56px 0;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end}
-.hero h1{font-size:clamp(2.8rem,7vw,5.2rem);text-transform:uppercase}
-.hero h1 em{font-style:normal;color:var(--brick)}
-.hero p.lead{font-size:1.15rem;max-width:34em;margin-top:18px;opacity:.88}
-.paths{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:40px}
-.path{display:flex;flex-direction:column;gap:8px;padding:22px 22px 26px;text-decoration:none;min-width:0}
-.path.sell{background:var(--brick);color:var(--brick-ink)}
-.path.inv{background:var(--surface);color:var(--ink)}
-.path span{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;opacity:.85}
-.path strong{font-family:var(--f-display);font-size:1.9rem;text-transform:uppercase;line-height:1}
-.path i{font-style:normal;font-weight:600}
-.path:hover strong{text-decoration:underline}
-.arch{width:100%;max-width:380px;justify-self:end}
-.trust{display:flex;flex-wrap:wrap;gap:8px 28px;padding-block:18px;font-size:.88rem;border-top:1px solid var(--line);background:var(--surface)}
-.trust li{list-style:none;display:flex;gap:8px;align-items:center}
-.trust ul{display:contents;margin:0;padding:0}
-.trust li::before{content:"";width:8px;height:8px;background:var(--brick);transform:rotate(45deg)}
-
-section{padding-block:72px}
-.sec-head{display:grid;gap:10px;margin-bottom:36px;max-width:44em}
-.sec-head p{color:var(--muted);font-size:1.05rem}
-
-/* two lanes */
-.lanes{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.lane{background:var(--surface);border:1px solid var(--line);padding:28px;display:grid;gap:18px;align-content:start;min-width:0}
-.lane.sell{border-top:6px solid var(--brick)}
-.lane.inv{border-top:6px solid var(--slate)}
-.ticks{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.ticks li{display:grid;grid-template-columns:22px 1fr;gap:8px}
-.ticks li::before{content:"✓";font-weight:700;color:var(--sage)}
-.steps{counter-reset:s;list-style:none;padding:0;margin:0;display:grid;gap:12px}
-.steps li{counter-increment:s;display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:start}
-.steps li::before{content:counter(s);font-family:var(--f-display);font-size:1.4rem;background:var(--ink);color:var(--bg);width:30px;height:30px;display:grid;place-items:center}
-
-/* forms */
-form{display:grid;gap:12px}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-label{display:grid;gap:4px;font-size:.82rem;font-weight:600}
-input,select,textarea{font:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:0;width:100%;min-width:0}
-textarea{min-height:76px;resize:vertical}
-.btn{font:inherit;font-weight:700;border:0;padding:14px 18px;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center}
-.btn.sell{background:var(--brick);color:var(--brick-ink)}
-.btn.inv{background:var(--slate);color:var(--slate-ink)}
-.btn:hover{filter:brightness(1.08)}
-.ok{background:var(--brick-soft);padding:14px;font-size:.92rem}
-.fine{font-size:.78rem;color:var(--muted)}
-
-/* deal pack */
-.deal{background:var(--slate);color:var(--slate-ink);padding:24px;display:grid;gap:14px}
-.deal .tag{font-family:var(--f-mono);font-size:.72rem;letter-spacing:.06em;color:var(--brick);text-transform:uppercase}
-.deal dl{display:grid;grid-template-columns:1fr auto;gap:6px 16px;margin:0;font-variant-numeric:tabular-nums}
-.deal dt{opacity:.75}
-.deal dd{margin:0;font-family:var(--f-mono);text-align:right}
-.deal .big{border-top:1px solid rgba(255,255,255,.18);padding-top:10px;font-weight:700}
-
-/* how / about */
-.how{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
-.about p+p{margin-top:14px}
-.about .quote{font-family:var(--f-display);font-size:clamp(1.8rem,3.6vw,2.6rem);text-transform:uppercase;line-height:1.05;border-left:6px solid var(--brick);padding-left:18px}
-.faq{display:grid;gap:10px;max-width:820px}
-details{background:var(--surface);border:1px solid var(--line);padding:16px 18px}
-summary{cursor:pointer;font-weight:600}
-summary span{color:var(--brick);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;margin-right:8px}
-details p{margin-top:10px;color:var(--muted)}
-.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.contact div{background:var(--surface);border:1px solid var(--line);padding:18px;display:grid;gap:4px;min-width:0}
-.contact b{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.contact code{font-family:var(--f-mono);font-size:.9rem;overflow-wrap:anywhere}
-
-footer{background:var(--slate);color:var(--slate-ink);padding-block:36px;font-size:.85rem}
-.foot{display:grid;gap:16px}
-.reg{display:flex;flex-wrap:wrap;gap:8px}
-.reg span{border:1px dashed rgba(255,255,255,.35);padding:4px 10px;font-family:var(--f-mono);font-size:.74rem}
-.alt{background:var(--surface);border-block:1px solid var(--line)}
-
-@media (max-width:820px){
-  .hero-grid,.lanes,.how,.about{grid-template-columns:1fr}
-  .arch{display:none}
-  .contact{grid-template-columns:1fr}
-}
-@media (max-width:520px){
-  .paths,.row{grid-template-columns:1fr}
-  .links{font-size:.82rem}
-  section{padding-block:52px}
-}
-@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
-
-/* lead profiler popup */
-.qz-back{position:fixed;inset:0;z-index:20;background:rgba(12,16,19,.6);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
-.qz{background:var(--surface);color:var(--ink);width:100%;max-width:480px;max-height:100%;overflow:auto;border-top:6px solid var(--brick);padding:24px;display:grid;gap:16px;position:relative}
-.qz-x{position:absolute;top:10px;right:12px;background:none;border:0;font-size:1.5rem;line-height:1;color:var(--muted);cursor:pointer;padding:4px 8px}
-.qz h3{font-size:1.7rem;padding-right:28px}
-.qz-bar{height:4px;background:var(--line)}
-.qz-bar i{display:block;height:100%;background:var(--brick);transition:width .25s}
-.qz-opts{display:grid;gap:8px}
-.qz-opt{font:inherit;text-align:left;padding:12px 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer}
-.qz-opt:hover{border-color:var(--brick)}
-.qz-step{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
-.grade{display:grid;gap:6px;padding:14px;border:1px dashed var(--line)}
-.grade b{font-family:var(--f-display);font-size:1.6rem;text-transform:uppercase}
-.grade.hot b{color:var(--brick)}.grade.warm b{color:#c07a12}.grade.cold b{color:#3d7fb0}
-.qz-link{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:inherit;font-size:.85rem;justify-self:start;padding:0}
-</style>
-
-
-<header>
-  <div class="wrap nav">
+<header class="site-head">
+  <div class="wrap head-in">
     <a class="brand" href="#top" aria-label="Keystone North Property Partners, home">
-      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M3 31V16a14 14 0 0 1 28 0v15h-7V17a7 7 0 0 0-14 0v14z" fill="currentColor" opacity=".9"/><path d="M13.5 2.6h7l-1.4 8.6h-4.2z" fill="var(--brick)"/></svg>
-      <span><b>Keystone North</b><small>Property Partners</small></span>
+      <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M4 36V19.5C4 10.9 11.2 4 20 4s16 6.9 16 15.5V36h-7.5V19.8c0-4.6-3.8-8.3-8.5-8.3s-8.5 3.7-8.5 8.3V36H4Z" fill="#0d1b2a"/>
+        <path d="M15.6 1.6h8.8l-1.9 11.6h-5L15.6 1.6Z" fill="#0d6b5b"/>
+      </svg>
+      <span class="brand-txt"><b>Keystone North</b><em>Property Partners</em></span>
     </a>
-    <nav class="links" aria-label="Main">
+    <nav class="site-nav" aria-label="Main">
       <a href="#sellers">Sell your house</a>
-      <a href="#investors">Investors</a>
-      <a href="#how">How it works</a>
+      <a href="#investors">For investors</a>
+      <a href="#process">How it works</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#faq">FAQs</a>
     </nav>
+    <a class="btn btn-accent btn-sm" href="#sellers">Get a free offer</a>
   </div>
 </header>
 
 <main id="top">
-  <div class="hero">
+
+  <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <p class="eyebrow">Leeds · Manchester · across the North</p>
-        <h1>Property solutions for the North. <em>Sellers</em> and <em>investors</em>, sorted.</h1>
-        <p class="lead">Need to sell fast? Looking for your next below-market deal? We connect motivated sellers with serious investors, quickly, fairly and without the hassle.</p>
+        <p class="eyebrow">Leeds &middot; Manchester &middot; across the North</p>
+        <h1>A straighter path to the <em>right</em> property outcome.</h1>
+        <p class="lead">For homeowners who need a fair, certain sale without the waiting. For investors who want deals that already stack up before they see them.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#sellers">I want to sell my house
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#investors">I'm an investor
+            <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+        <ul class="hero-points">
+          <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Offers within 48 hours</li>
+          <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>No agent fees for sellers</li>
+          <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Every deal checked against sold prices</li>
+        </ul>
       </div>
-      <svg class="arch" viewBox="0 0 380 300" aria-hidden="true">
-        <g fill="none" stroke="currentColor" stroke-opacity=".28" stroke-width="2">
-          <path d="M20 300V170a170 170 0 0 1 340 0v130"/>
-          <path d="M80 300V175a110 110 0 0 1 220 0v125"/>
-          <path d="M50 230h30M300 230h30M50 270h30M300 270h30M26 120l52 28M354 120l-52 28M78 52l38 44M302 52l-38 44"/>
-        </g>
-        <path d="M168 0h44l-8 66h-28z" fill="var(--brick)"/>
-      </svg>
+
+      <aside class="card-deal" aria-label="Example deal pack">
+        <div class="cd-top">
+          <div>
+            <p>Example deal pack</p>
+            <strong>2-bed terrace &middot; Leeds LS11</strong>
+          </div>
+          <span class="pill">Illustration</span>
+        </div>
+        <dl>
+          <div class="ln"><dt>Agreed purchase price</dt><dd>&pound;112,000</dd></div>
+          <div class="ln"><dt>Refurbishment estimate</dt><dd>&pound;9,500</dd></div>
+          <div class="ln"><dt>Estimated value after works</dt><dd>&pound;155,000</dd></div>
+          <div class="ln"><dt>Expected rent</dt><dd>&pound;850 pcm</dd></div>
+          <div class="ln"><dt>Gross yield on purchase</dt><dd>9.1%</dd></div>
+          <div class="ln total"><dt>Equity on completion</dt><dd>&pound;33,500</dd></div>
+        </dl>
+        <p class="cd-foot">Every pack we send carries the full workings: sold comparables, refurbishment costings, rental evidence and our fee, stated up front.</p>
+      </aside>
     </div>
+  </section>
+
+  <div class="strip">
     <div class="wrap">
-      <div class="paths">
-        <a class="path sell" href="#sellers"><span>Homeowners</span><strong>I want to sell my house</strong><i>Free, no-obligation offer →</i></a>
-        <a class="path inv" href="#investors"><span>Investors</span><strong>I'm an investor</strong><i>Get deals first →</i></a>
+      <div class="strip-in">
+        <div><b>48 hrs</b><span>Typical time to a written offer</span></div>
+        <div><b>20%+</b><span>Minimum discount we target for investors</span></div>
+        <div><b>&pound;0</b><span>Fees charged to homeowners</span></div>
+        <div><b>2</b><span>Core regions: Leeds &amp; Greater Manchester</span></div>
       </div>
     </div>
   </div>
-  <div class="trust"><div class="wrap" style="display:flex;flex-wrap:wrap;gap:8px 28px"><ul>
-    <li>Fast offers</li><li>No estate agent fees for sellers</li><li>Fully vetted deals for investors</li><li>Covering Leeds and Manchester</li>
-  </ul></div></div>
 
-  <section id="sellers">
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Two sides, one standard</p>
+        <h2>Tell us which side of the table you're on.</h2>
+        <p class="sub">We work with both, and we're straight with both. Sellers get certainty. Investors get numbers that hold up to scrutiny.</p>
+      </div>
+      <div class="paths">
+        <a class="path" href="#sellers">
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 11.2 12 4l9 7.2M5.5 9.8V20h13V9.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Homeowners</h3>
+          <p>Inherited a property, tired of being a landlord, facing repairs, or a chain that keeps collapsing? We'll give you a fair figure and a date you can plan around.</p>
+          <span class="go">Get a free, no-obligation offer
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+        <a class="path" href="#investors">
+          <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19.5h16M6.5 19.5V9.8M12 19.5V5m5.5 14.5v-6.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <h3>Investors</h3>
+          <p>Stop trawling the portals. We source, negotiate and package below-market property across Leeds and Manchester, then send you only what matches your criteria.</p>
+          <span class="go">Join the investor list
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sellers" class="tint">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">For homeowners</p>
-        <h2>Sell your house fast, on your timeline</h2>
-        <p>Stuck in a chain? Inherited a property? Tired landlord? Facing repairs you can't afford? We can help you sell quickly, whatever the condition.</p>
+        <h2>Sell on your timeline, not the market's.</h2>
+        <p class="sub">Agreed sales fall through far more often than people expect. We take that risk off the table: one buyer, one figure, one date.</p>
       </div>
-      <div class="lanes">
-        <div class="lane sell">
-          <h3>Why sellers choose us</h3>
+      <div class="split">
+        <div>
           <ul class="ticks">
-            <li>A fair offer, usually within 48 hours</li>
-            <li>No estate agent fees and no lengthy listings</li>
-            <li>Any condition. No need to fix anything first</li>
-            <li>You choose your completion date</li>
-            <li>Friendly, local, no-pressure service</li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>A written offer, usually inside 48 hours</b><span>We look at recent sold prices on your street before we come back to you, not after.</span></div></li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>No agent fees and no public listing</b><span>Nothing in the window, no viewings parade, no commission taken off your figure.</span></div></li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Any condition at all</b><span>Damp, dated, part-finished, tenanted or empty for years. You don't fix a thing first.</span></div></li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>You pick the completion date</b><span>Fast if you need it fast, or months away if that suits you better.</span></div></li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>A straight conversation</b><span>If selling to an investor isn't your best move, we'll tell you that too.</span></div></li>
           </ul>
-          <h3>How it works</h3>
-          <ol class="steps">
-            <li>Tell us about your property. It takes two minutes.</li>
-            <li>We assess it and come back with a fair offer.</li>
-            <li>You pick the date. We handle the rest.</li>
-          </ol>
         </div>
-        <div class="lane sell">
+        <div class="form-card">
           <h3>Get your free offer</h3>
+          <p class="note">Takes two minutes. No cost, no obligation, no pressure.</p>
           <form id="sellForm" data-msg="Thanks. We'll call you within 48 hours with your free, no-obligation offer.">
             <div class="row">
-              <label for="s-name">Name<input id="s-name" required autocomplete="name"></label>
-              <label for="s-phone">Phone<input id="s-phone" type="tel" required autocomplete="tel"></label>
+              <label for="s-name">Name<input id="s-name" required autocomplete="name" placeholder="Jane Smith"></label>
+              <label for="s-phone">Phone<input id="s-phone" type="tel" required autocomplete="tel" placeholder="07700 900000"></label>
             </div>
-            <label for="s-email">Email<input id="s-email" type="email" autocomplete="email"></label>
-            <label for="s-addr">Property address<input id="s-addr" required autocomplete="street-address"></label>
+            <label for="s-email">Email<input id="s-email" type="email" autocomplete="email" placeholder="jane@example.com"></label>
+            <label for="s-addr">Property address<input id="s-addr" required autocomplete="street-address" placeholder="14 Example Road, Leeds LS11"></label>
             <div class="row">
               <label for="s-why">Reason for selling<select id="s-why"><option>Need a quick sale</option><option>Inherited property</option><option>Tired landlord</option><option>Repairs needed</option><option>Relocating</option><option>Other</option></select></label>
               <label for="s-when">Timescale<select id="s-when"><option>ASAP</option><option>1 to 3 months</option><option>3 to 6 months</option><option>Just exploring</option></select></label>
             </div>
-            <label for="s-cond">Property condition<textarea id="s-cond" placeholder="e.g. 2-bed terrace, needs a new kitchen and some damp work"></textarea></label>
-            <button class="btn sell" type="submit">Get my free, no-obligation offer <span>→</span></button>
-            <p class="fine">No cost and no obligation. We never share your details without your permission. Read our <a href="privacy.html">privacy notice</a>.</p>
+            <label for="s-cond">Anything we should know<textarea id="s-cond" placeholder="e.g. 2-bed terrace, needs a new kitchen and some damp work"></textarea></label>
+            <button class="btn btn-accent btn-wide" type="submit">Get my free offer
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <p class="fine">We never share your details without your permission. Read our <a href="privacy.html">privacy notice</a>.</p>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="investors" class="alt">
+  <section id="investors">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">For investors</p>
-        <h2>Hand-picked below-market deals across the North</h2>
-        <p>Stop scrolling Rightmove. We find, negotiate and package high-yield deals so you can invest with confidence, even remotely.</p>
+        <h2>Deals that have already been through the sums.</h2>
+        <p class="sub">We target a minimum 20% discount to the value after works, and a gross yield of 7% or better. Anything that fails those tests doesn't reach your inbox.</p>
       </div>
-      <div class="lanes">
-        <div class="lane inv">
-          <h3>What you get</h3>
+      <div class="split">
+        <div>
           <ul class="ticks">
-            <li>Off-market and below-market-value opportunities</li>
-            <li>Full deal packs: purchase price, refurb estimate, comparables, rent and yield</li>
-            <li>Buy-to-let, flips, HMOs and portfolio deals</li>
-            <li>Deals matched to your exact criteria</li>
-            <li>Support from offer through to completion</li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Off-market and below-market opportunities</b><span>Sourced direct from motivated sellers and from agents' slower-moving stock.</span></div></li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>A full pack, not a teaser</b><span>Purchase price, refurbishment costing, sold comparables, rental evidence and yield.</span></div></li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Matched to your criteria</b><span>Buy-to-let, light-refurbishment flips, HMO-suitable stock or portfolio additions.</span></div></li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Invest from anywhere</b><span>We're on the ground in Leeds and Manchester, so you don't have to be.</span></div></li>
+            <li><svg width="17" height="17" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.5 6.2 12 13 4.5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>One clear fee, declared up front</b><span>Stated on the pack before you reserve. No surprises at the solicitor's.</span></div></li>
           </ul>
-          <div class="deal" aria-label="Example deal pack">
-            <p class="tag">Example deal pack · illustration only</p>
-            <h3>2-bed terrace, Leeds LS11</h3>
-            <dl>
-              <dt>Agreed purchase price</dt><dd>£112,000</dd>
-              <dt>Estimated end value</dt><dd>£155,000</dd>
-              <dt>Refurb estimate</dt><dd>£9,500</dd>
-              <dt>Expected rent</dt><dd>£850 pcm</dd>
-              <dt>Gross yield on purchase</dt><dd>9.1%</dd>
-              <dt class="big">Equity after refurb</dt><dd class="big">£33,500</dd>
-            </dl>
-          </div>
         </div>
-        <div class="lane inv">
+        <div class="form-card">
           <h3>Join the investor list</h3>
+          <p class="note">Tell us what you're looking for and you'll only hear from us when it lands.</p>
           <form id="invForm" data-msg="Thanks. You're on the list, and we'll send you deals that match your criteria.">
             <div class="row">
-              <label for="i-name">Name<input id="i-name" required autocomplete="name"></label>
-              <label for="i-phone">Phone<input id="i-phone" type="tel" autocomplete="tel"></label>
+              <label for="i-name">Name<input id="i-name" required autocomplete="name" placeholder="Alex Doyle"></label>
+              <label for="i-phone">Phone<input id="i-phone" type="tel" autocomplete="tel" placeholder="07700 900000"></label>
             </div>
-            <label for="i-email">Email<input id="i-email" type="email" required autocomplete="email"></label>
+            <label for="i-email">Email<input id="i-email" type="email" required autocomplete="email" placeholder="alex@example.com"></label>
             <div class="row">
-              <label for="i-budget">Budget<select id="i-budget"><option>Up to £100k</option><option>£100k to £150k</option><option>£150k to £250k</option><option>£250k+</option></select></label>
+              <label for="i-budget">Budget<select id="i-budget"><option>Up to &pound;100k</option><option>&pound;100k to &pound;150k</option><option>&pound;150k to &pound;250k</option><option>&pound;250k+</option></select></label>
               <label for="i-strat">Strategy<select id="i-strat"><option>Buy-to-let</option><option>Flip</option><option>HMO</option><option>Portfolio</option><option>Other</option></select></label>
             </div>
             <div class="row">
-              <label for="i-areas">Preferred areas<input id="i-areas" placeholder="e.g. Leeds, Manchester, Salford"></label>
+              <label for="i-areas">Preferred areas<input id="i-areas" placeholder="Leeds, Manchester, Salford"></label>
               <label for="i-fund">Buying with<select id="i-fund"><option>Cash</option><option>Mortgage</option><option>Bridging finance</option></select></label>
             </div>
-            <button class="btn inv" type="submit">Join the investor list. Get deals first <span>→</span></button>
+            <button class="btn btn-primary btn-wide" type="submit">Send me matching deals
+              <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10m0 0-4-4m4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
             <p class="fine">A sourcing fee applies on reservation and is shown on every deal pack. Read our <a href="privacy.html">privacy notice</a>.</p>
           </form>
         </div>
@@ -303,54 +418,128 @@ footer{background:var(--slate);color:var(--slate-ink);padding-block:36px;font-si
     </div>
   </section>
 
-  <section id="how">
+  <section id="process" class="tint">
     <div class="wrap">
-      <div class="sec-head"><p class="eyebrow">How it works</p><h2>One simple process, two sides</h2></div>
-      <div class="how">
-        <div class="lane sell"><h3>For sellers</h3><ol class="steps"><li>Contact us</li><li>We value and make an offer</li><li>You choose the completion date</li></ol></div>
-        <div class="lane inv"><h3>For investors</h3><ol class="steps"><li>Register your criteria</li><li>Receive matched deal packs</li><li>Reserve the deal</li><li>We guide you to completion</li></ol></div>
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Four steps, and you always know which one you're on.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="bar"></div>
+          <h4>Tell us the basics</h4>
+          <p>Two minutes on the form, or a phone call if you'd rather talk it through.</p>
+        </div>
+        <div class="step">
+          <div class="bar"></div>
+          <h4>We do the homework</h4>
+          <p>Sold prices on the street, condition, rental evidence and what the numbers really support.</p>
+        </div>
+        <div class="step">
+          <div class="bar"></div>
+          <h4>You get the figures</h4>
+          <p>Sellers receive a written offer. Investors receive a full deal pack with the workings shown.</p>
+        </div>
+        <div class="step">
+          <div class="bar"></div>
+          <h4>We see it through</h4>
+          <p>Solicitors instructed, questions answered, progress chased, right up to completion.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="alt">
+  <section id="about">
     <div class="wrap about">
-      <p class="quote">We know these streets, these houses and the people in them.</p>
       <div>
         <p class="eyebrow">About us</p>
-        <p style="margin-top:10px">Keystone North Property Partners was built on years of door-to-door experience across the North. Today we focus on Leeds and Manchester, two of the strongest rental markets in the country.</p>
-        <p>Our job is simple. Help homeowners who need a quick, fair sale, and give investors access to deals that genuinely stack up. Honest numbers, straight talking, no gimmicks.</p>
+        <p class="pull" style="margin-top:16px">We know these streets, these houses and <span>the people in them.</span></p>
+        <div class="sig">
+          <span class="av" aria-hidden="true">JN</span>
+          <div><b>Jason Nota</b><span>Founder, Keystone North Property Partners</span></div>
+        </div>
+      </div>
+      <div class="body">
+        <p>Keystone North was built on years of knocking on doors across the North of England. That's not a line on a website. It means thousands of real conversations on real doorsteps, with people at every stage of their lives, and a feel for what a street is actually worth that you don't get from a spreadsheet.</p>
+        <p>Today we focus on Leeds and Greater Manchester, two of the strongest rental markets in the country and two places we know street by street.</p>
+        <p>The job is simple enough. Help homeowners who need a quick, fair sale get one without being messed about. Give investors access to deals that genuinely stack up, with the workings laid out so they can check them. Honest numbers, straight talking, no gimmicks.</p>
       </div>
     </div>
   </section>
 
-  <section id="faq">
+  <section id="faq" class="tint">
     <div class="wrap">
-      <div class="sec-head"><p class="eyebrow">Questions</p><h2>Frequently asked</h2></div>
+      <div class="sec-head">
+        <p class="eyebrow">Questions</p>
+        <h2>The things people ask us first.</h2>
+      </div>
       <div class="faq">
-        <details><summary><span>Sellers</span>Will you really help in any condition?</summary><p>Yes. Damp, dated or unmodernised, we'll still make an offer.</p></details>
-        <details><summary><span>Sellers</span>Is there any cost to me?</summary><p>No. Our offer is free and there's no obligation.</p></details>
-        <details><summary><span>Investors</span>How are deals priced?</summary><p>Each deal pack shows the figures in full. A sourcing fee applies on reservation and is stated clearly up front.</p></details>
-        <details><summary><span>Investors</span>Can I invest remotely?</summary><p>Yes. Our deal packs and local team mean you don't need to be on the ground.</p></details>
+        <details><summary><span class="tag">Sellers</span>Will you really take it in any condition?</summary><div class="ans">Yes. Damp, dated, unmodernised, fire-damaged, part-built, tenanted or empty for years. The condition changes the figure, not whether we're interested.</div></details>
+        <details><summary><span class="tag">Sellers</span>Is there any cost to me?</summary><div class="ans">None. The valuation and the offer are free, there's no obligation to accept, and we don't charge homeowners a fee at any point.</div></details>
+        <details><summary><span class="tag">Sellers</span>Will I get the full market price?</summary><div class="ans">Usually not, and we won't pretend otherwise. You're trading a slice of the headline price for speed and certainty. If you've got six months and a property in good order, the open market may well serve you better, and we'll say so.</div></details>
+        <details><summary><span class="tag">Investors</span>How are the deals priced?</summary><div class="ans">Every pack shows the purchase price, refurbishment estimate, comparable sold prices and expected rent. Our sourcing fee is stated clearly on the pack and is payable on reservation.</div></details>
+        <details><summary><span class="tag">Investors</span>Can I invest remotely?</summary><div class="ans">Yes. The packs are built so you can assess a deal properly from anywhere, and we handle viewings, access and progress on the ground.</div></details>
+        <details><summary><span class="tag">Both</span>Which areas do you cover?</summary><div class="ans">Leeds and Greater Manchester are our core patch, and we'll look at the surrounding towns where the numbers work. If a property sits outside that, we'll tell you straight away rather than waste your time.</div></details>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="alt">
+  <section class="band">
     <div class="wrap">
-      <div class="sec-head"><p class="eyebrow">Contact</p><h2>Talk to a real person</h2></div>
-      <p style="max-width:40em">The quickest way to reach us is the form for <a href="#sellers">selling a house</a> or <a href="#investors">investing</a>. We call every enquiry back, usually the same day.</p>
+      <h2>Not sure which side you're on?</h2>
+      <p>Plenty of people come to us owning one property and leave thinking like an investor, or the other way round. Either way, start with a conversation and no obligation.</p>
+      <div class="cta-row">
+        <a class="btn btn-accent" href="#sellers">Get a free offer on my house</a>
+        <a class="btn btn-ghost" href="#investors">Show me investment deals</a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap foot">
-    <strong style="font-family:var(--f-display);font-size:1.4rem;text-transform:uppercase">Keystone North Property Partners</strong>
-    <p><a href="privacy.html">Privacy notice</a></p>
-    <p>Written by Jason Nota · Intellectual property of Jason Nota</p>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:14px">
+          <svg class="mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M4 36V19.5C4 10.9 11.2 4 20 4s16 6.9 16 15.5V36h-7.5V19.8c0-4.6-3.8-8.3-8.5-8.3s-8.5 3.7-8.5 8.3V36H4Z" fill="#0d1b2a"/>
+            <path d="M15.6 1.6h8.8l-1.9 11.6h-5L15.6 1.6Z" fill="#0d6b5b"/>
+          </svg>
+          <span class="brand-txt"><b>Keystone North</b><em>Property Partners</em></span>
+        </a>
+        <p class="muted" style="max-width:34em;font-size:.9rem">Property solutions for Leeds, Greater Manchester and the North. A fair sale for homeowners, sound numbers for investors.</p>
+      </div>
+      <div>
+        <h5>Homeowners</h5>
+        <ul>
+          <li><a href="#sellers">Get a free offer</a></li>
+          <li><a href="#process">How it works</a></li>
+          <li><a href="#faq">Questions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Investors</h5>
+        <ul>
+          <li><a href="#investors">Join the investor list</a></li>
+          <li><a href="#investors">What's in a deal pack</a></li>
+          <li><a href="privacy.html">Privacy notice</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      <span>&copy; 2026 Keystone North Property Partners. Written by Jason Nota.</span>
+      <span>Intellectual property of Jason Nota.</span>
+    </div>
   </div>
 </footer>
+
+<div class="qz-back" id="qz" hidden role="dialog" aria-modal="true" aria-labelledby="qz-title">
+  <div class="qz">
+    <button class="qz-x" id="qz-close" aria-label="Close">&times;</button>
+    <div class="qz-bar"><i id="qz-prog" style="width:0"></i></div>
+    <div id="qz-body"></div>
+  </div>
+</div>
 
 <script>
 // Lead sending to n8n 'Keystone 1 - Lead Intake'.
@@ -370,14 +559,6 @@ document.querySelectorAll('form').forEach(function(f){
   });
 });
 </script>
-
-<div class="qz-back" id="qz" hidden role="dialog" aria-modal="true" aria-labelledby="qz-title">
-  <div class="qz">
-    <button class="qz-x" id="qz-close" aria-label="Close">×</button>
-    <div class="qz-bar"><i id="qz-prog" style="width:0"></i></div>
-    <div id="qz-body"></div>
-  </div>
-</div>
 
 <script>
 (function(){
@@ -401,7 +582,7 @@ document.querySelectorAll('form').forEach(function(f){
     ]
   };
   var el=document.getElementById('qz'),body=document.getElementById('qz-body'),prog=document.getElementById('qz-prog');
-  var path=null,i=0,score=0,answers=[],ans={};
+  var path=null,i=0,score=0,ans={};
   function seen(){try{return localStorage.getItem('kn-qz')==='1'}catch(e){return false}}
   function mark(){try{localStorage.setItem('kn-qz','1')}catch(e){}}
   function close(){el.hidden=true;mark()}
@@ -410,12 +591,12 @@ document.querySelectorAll('form').forEach(function(f){
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!el.hidden)close()});
   function opts(list,fn){var w=document.createElement('div');w.className='qz-opts';list.forEach(function(o){var b=document.createElement('button');b.className='qz-opt';b.type='button';b.textContent=o[0];b.onclick=function(){fn(o)};w.appendChild(b)});return w}
   function render(title,step,node,pct){body.innerHTML='';var s=document.createElement('p');s.className='qz-step';s.textContent=step;var h=document.createElement('h3');h.id='qz-title';h.textContent=title;body.append(s,h,node);prog.style.width=pct+'%';var f=body.querySelector('button,input');if(f)f.focus()}
-  function start(){render(Q.start.q,'Help us help you',opts(Q.start.opts,function(o){if(o[1]==='browse'){thanks(null);return}path=o[1];i=0;score=0;answers=[];ans={};ask()}),0)}
-  function ask(){var list=Q[path];if(i>=list.length){details();return}var it=list[i];render(it.q,'Question '+(i+1)+' of '+list.length,opts(it.opts,function(o){score+=o[1];answers.push([it.q,o[0]]);ans[it.k]=o[0];i++;ask()}),(i/(list.length+1))*100)}
+  function start(){render(Q.start.q,'Help us help you',opts(Q.start.opts,function(o){if(o[1]==='browse'){thanks(null);return}path=o[1];i=0;score=0;ans={};ask()}),0)}
+  function ask(){var list=Q[path];if(i>=list.length){details();return}var it=list[i];render(it.q,'Question '+(i+1)+' of '+list.length,opts(it.opts,function(o){score+=o[1];ans[it.k]=o[0];i++;ask()}),(i/(list.length+1))*100)}
   function maxScore(){return Q[path].reduce(function(t,it){return t+Math.max.apply(null,it.opts.map(function(o){return o[1]}))},0)}
-  function grade(){var p=score/maxScore();if(p>=0.7)return['hot','Hot lead','Call within the hour.'];if(p>=0.4)return['warm','Warm lead','Call within 24 hours and nurture.'];return['cold','Cold lead','Add to the email list and follow up monthly.']}
-  function details(){var f=document.createElement('form');f.innerHTML='<label for="qz-name">Name<input id="qz-name" required autocomplete="name"></label><label for="qz-phone">Phone<input id="qz-phone" type="tel" autocomplete="tel"></label><label for="qz-email">Email<input id="qz-email" type="email" required autocomplete="email"></label><button class="btn '+(path==='seller'?'sell':'inv')+'" type="submit">'+(path==='seller'?'Get my free offer':'Send me matching deals')+' <span>→</span></button><p class="fine">We only use your details to contact you about this. No spam. <a href=\"privacy.html\">Privacy notice</a></p>';f.addEventListener('submit',function(e){e.preventDefault();if(window.KN)KN.send(Object.assign({type:path,Name:KN.v('qz-name'),Phone:KN.v('qz-phone'),Email:KN.v('qz-email'),Score:score,'Max Score':maxScore(),Source:'Website pop-up'},ans));thanks(grade())});render(path==='seller'?'Great. Where should we send your offer?':'Great. Where should we send your deals?','Last step',f,95)}
-  function thanks(g){var w=document.createElement('div');w.style.display='grid';w.style.gap='14px';var p=document.createElement('p');p.textContent=g?'Thanks. One of the team will be in touch shortly.':'No problem. Have a look around, and the buttons at the top will take you to the right place.';w.appendChild(p);var c=document.createElement('button');c.className='btn inv';c.type='button';c.innerHTML='Close <span>×</span>';c.onclick=close;w.appendChild(c);render(g?'You are all set':'Enjoy the site','Done',w,100);mark()}
+  function grade(){var p=score/maxScore();if(p>=0.7)return['hot','Hot lead'];if(p>=0.4)return['warm','Warm lead'];return['cold','Cold lead']}
+  function details(){var f=document.createElement('form');f.innerHTML='<label for="qz-name">Name<input id="qz-name" required autocomplete="name"></label><label for="qz-phone">Phone<input id="qz-phone" type="tel" autocomplete="tel"></label><label for="qz-email">Email<input id="qz-email" type="email" required autocomplete="email"></label><button class="btn '+(path==='seller'?'btn-accent':'btn-primary')+' btn-wide" type="submit">'+(path==='seller'?'Get my free offer':'Send me matching deals')+' <span aria-hidden="true">&rarr;</span></button><p class="fine">We only use your details to contact you about this. No spam. <a href="privacy.html">Privacy notice</a></p>';f.addEventListener('submit',function(e){e.preventDefault();if(window.KN)KN.send(Object.assign({type:path,Name:KN.v('qz-name'),Phone:KN.v('qz-phone'),Email:KN.v('qz-email'),Score:score,'Max Score':maxScore(),Source:'Website pop-up'},ans));thanks(grade())});render(path==='seller'?'Where should we send your offer?':'Where should we send your deals?','Last step',f,95)}
+  function thanks(g){var w=document.createElement('div');w.style.display='grid';w.style.gap='16px';var p=document.createElement('p');p.textContent=g?'Thanks. One of the team will be in touch shortly.':'No problem. Have a look around, and the buttons at the top will take you to the right place.';w.appendChild(p);var c=document.createElement('button');c.className='btn btn-ghost';c.type='button';c.textContent='Close';c.onclick=close;w.appendChild(c);render(g?'You are all set':'Enjoy the site','Done',w,100);mark()}
   setTimeout(function(){if(!seen()){start();el.hidden=false}},5000);
 })();
 </script>
